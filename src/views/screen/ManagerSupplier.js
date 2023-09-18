@@ -49,7 +49,7 @@ const Managersupplier = () => {
     console.log(object)
     if (isUpdate) {
       axios
-        .put("http://localhost:5000/api/supplies/"+object.IDSupplier, object)
+        .put("https://node-server-98j2.onrender.com/api/supplies/"+object.IDSupplier, object)
         .then((response) => {
           if (response.data.status) {
             alert(response.data.message);
@@ -64,7 +64,7 @@ const Managersupplier = () => {
         .catch(console.log);
     } else {
       axios
-        .post("http://localhost:5000/api/supplies", object)
+        .post("https://node-server-98j2.onrender.com/api/supplies", object)
         .then((response) => {
          
           if (response.data.status) {
@@ -82,7 +82,7 @@ const Managersupplier = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/supplies", )
+      .get("https://node-server-98j2.onrender.com/api/supplies", )
       .then((response) => {
         const listnew = response.data.data;
           setList(listnew);
@@ -93,7 +93,7 @@ const Managersupplier = () => {
 
   const deleteObject = (IDsupplier) => {
     axios
-      .delete("http://localhost:5000/api/supplies/" + IDsupplier)
+      .delete("https://node-server-98j2.onrender.com/api/supplies/" + IDsupplier)
       .then((response) => {
        
         if (response.data.status) {

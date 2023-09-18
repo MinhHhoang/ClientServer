@@ -50,7 +50,7 @@ const ManagerCategory = () => {
 
     if (isUpdate) {
       axios
-        .put("http://localhost:5000/api/categories/"+object.IDCategory, object)
+        .put("https://node-server-98j2.onrender.com/api/categories/"+object.IDCategory, object)
         .then((response) => {
           if (response.data.status) {
             alert(response.data.message);
@@ -65,7 +65,7 @@ const ManagerCategory = () => {
         .catch(console.log);
     } else {
       axios
-        .post("http://localhost:5000/api/categories", object)
+        .post("https://node-server-98j2.onrender.com/api/categories", object)
         .then((response) => {
          
           if (response.data.status) {
@@ -83,7 +83,7 @@ const ManagerCategory = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/categories", )
+      .get("https://node-server-98j2.onrender.com/api/categories", )
       .then((response) => {
         const listnew = response.data.data;
           setList(listnew);
@@ -94,7 +94,7 @@ const ManagerCategory = () => {
 
   const deleteObject = (IDCategory) => {
     axios
-      .delete("http://localhost:5000/api/categories/" + IDCategory)
+      .delete("https://node-server-98j2.onrender.com/api/categories/" + IDCategory)
       .then((response) => {
        
         if (response.data.status) {
